@@ -6,9 +6,59 @@ const config: Config = {
   content: ['./src/**/*.{astro,md,mdx,ts,tsx}'],
   theme: {
     extend: {
+      typography: {
+        flexoki: {
+          css: {
+            '--tw-prose-body': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-headings': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-lead': 'hsl(var(--flexoki-tx-2))',
+            '--tw-prose-links': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-bold': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-counters': 'hsl(var(--flexoki-tx-2))',
+            '--tw-prose-bullets': 'hsl(var(--flexoki-tx-3))',
+            '--tw-prose-hr': 'hsl(var(--flexoki-ui-2))',
+            '--tw-prose-quotes': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-quote-borders': 'hsl(var(--flexoki-ui-2))',
+            '--tw-prose-captions': 'hsl(var(--flexoki-tx-2))',
+            '--tw-prose-code': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-pre-code': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-pre-bg': 'hsl(var(--flexoki-ui))',
+            '--tw-prose-th-borders': 'hsl(var(--flexoki-ui-2))',
+            '--tw-prose-td-borders': 'hsl(var(--flexoki-ui-2))',
+
+            // Dark mode overrides
+            '--tw-prose-invert-body': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-invert-headings': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-invert-lead': 'hsl(var(--flexoki-tx-2))',
+            '--tw-prose-invert-links': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-invert-bold': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-invert-counters': 'hsl(var(--flexoki-tx-2))',
+            '--tw-prose-invert-bullets': 'hsl(var(--flexoki-tx-3))',
+            '--tw-prose-invert-hr': 'hsl(var(--flexoki-ui-2))',
+            '--tw-prose-invert-quotes': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-invert-quote-borders': 'hsl(var(--flexoki-ui-2))',
+            '--tw-prose-invert-captions': 'hsl(var(--flexoki-tx-2))',
+            '--tw-prose-invert-code': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-invert-pre-code': 'hsl(var(--flexoki-tx))',
+            '--tw-prose-invert-pre-bg': 'hsl(var(--flexoki-ui))',
+            '--tw-prose-invert-th-borders': 'hsl(var(--flexoki-ui-2))',
+            '--tw-prose-invert-td-borders': 'hsl(var(--flexoki-ui-2))',
+          },
+        },
+      },
       fontFamily: {
-        sans: ['JetBrains Mono', ...defaultTheme.fontFamily.sans],
-        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
+        inter: ['Inter', 'sans-serif'],
+        sarina: ['Sarina', 'cursive'],
+        barlow: ['Barlow', 'sans-serif'],
+
+        FiraCode: ['Fira Code', 'sans-serif'],
+        LXGWBrightRegular: ['LXGWBright Regular', 'sans-serif'],
+        LXGWBrightMedium: ['LXGWBright Medium', 'sans-serif'],
+        LXGWBrightItalic: ['LXGWBright Italic', 'sans-serif'],
+        LXGWBrightMediumItalic: ['LXGWBright MediumItalic', 'sans-serif'],
+
+        sans: ['Inter', 'LXGWBright Medium', ...defaultTheme.fontFamily.sans],
+        // mono: ['Geist Mono', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         background: 'hsl(var(--background))',
